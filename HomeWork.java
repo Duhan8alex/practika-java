@@ -20,13 +20,11 @@
     
     static void printColor() {
         int value = 200;
-                if (value <=0) {
-           System.out.println("red");
-        }
-        if (value > 0 && value <= 100) {
+            if (value <=0) {
+                System.out.println("red");
+        }   else if (value <= 100) {
             System.out.println("yellow");
-        }
-        if (value > 100) {
+        }    else {
             System.out.println("green");
         }
     
@@ -35,11 +33,7 @@
     static void compareNumbers() {
         int a = 40;
         int b = 50;
-        if (a >= b) {
-            System.out.println(" a >= b");
-        }    else {
-            System.out.println("a < b");
+        System.out.println(a >= b? " a >= b" : "a < b");
         }
     }
- } 
    
