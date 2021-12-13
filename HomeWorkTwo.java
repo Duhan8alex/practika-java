@@ -6,15 +6,15 @@
  */
 class HomeWorkTwo {
     public static void main(String[]arge) {
-        System.out.println(within10and20(15, 9));
+        System.out.println(within10and20(5, 1));
         isPositiveOrNegative(8);
-        System.out.println(isNegative( - 5));
+        System.out.println(isNegative(-5));
         printTab();
     }
 
     static boolean within10and20(int a, int b) {
         int sum = a + b;
-        if (sum <= 20) {
+        if (sum <= 20 && sum >= 10) {
             return true;
         } else {
             return false;
@@ -26,15 +26,12 @@ class HomeWorkTwo {
     }
 
     static boolean isNegative(int a) {
-        if (a < 0); {
-            return true;
+        return a < 0; 
         }
-        return false;
-    }
 
-    static void printTab() {
-        for (int j = 0; j < 10; j++) {
-            System.out.print("0");
+        static void printTab() {
+            for (int j = 0; j < 10; j++) {
+                System.out.print("word ");
+            }
         }
     }
-}
