@@ -9,16 +9,12 @@ class HomeWorkTwo {
         System.out.println(within10and20(5, 1));
         isPositiveOrNegative(8);
         System.out.println(isNegative(-5));
-        printTab();
+        System.out.println(isYearLeap(2021));
+        repeatString("Hello, Java", 4);
     }
 
     static boolean within10and20(int a, int b) {
-        int sum = a + b;
-        if (sum <= 20 && sum >= 10) {
-            return true;
-        } else {
-            return false;
-        }
+        return a + b >= 10 && a + b <= 20;
     }
 
     static void isPositiveOrNegative(int a) {
@@ -26,12 +22,15 @@ class HomeWorkTwo {
     }
 
     static boolean isNegative(int a) {
-        return a < 0; 
-        }
+        return a < 0;
+    }
 
-        static void printTab() {
-            for (int j = 0; j < 10; j++) {
-                System.out.print("word ");
-            }
+    static void repeatString(String s, int count) {
+        for (int j = 0; j < count; j++) {
+            System.out.print("s ");
         }
     }
+    static boolean isYearLeap(int year) {
+        return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
+    }
+}
