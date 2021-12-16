@@ -10,7 +10,7 @@ class HomeWorkTwo {
         isPositiveOrNegative(8);
         System.out.println(isNegative(-5));
         System.out.println(isYearLeap(2021));
-        repeatString("Hello, Java", 4);
+        repeatString("Hello, Java. ", 4);
     }
 
     static boolean within10and20(int a, int b) {
@@ -27,7 +27,7 @@ class HomeWorkTwo {
 
     static void repeatString(String s, int count) {
         for (int j = 0; j < count; j++) {
-            System.out.print("s ");
+            System.out.print(s);
         }
     }
     static boolean isYearLeap(int year) {
