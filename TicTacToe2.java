@@ -1,3 +1,9 @@
+/**
+ * Java1 HomeWork #4
+ *
+ * @author Dushankovskiy Alexandr
+ * @version 20-22.12.2021
+ */
 import java.util.Scanner;
 import java.util.Random;
 
