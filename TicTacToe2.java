@@ -4,6 +4,8 @@
  * @author Dushankovskiy Alexandr
  * @version 20-22.12.2021
  */
+
+
 import java.util.Scanner;
 import java.util.Random;
 
@@ -98,22 +100,22 @@ class TicTacToe2 {
     }
 
     boolean isWin(char ch) { 
-        {
+        
             for (int x = 0; x < table.length; x++) {
                 if (table[x][0] == ch && table[x][1] == ch && table[x][2] == ch) return true;
             }
-        }
-        {
+        
+        
             for (int y = 0; y < table.length; y++) {
                 if (table[0][y] == ch && table[1][y] == ch && table[2][y] == ch) return true;
             }
 
-        }
-        {
+        
+        
             if (table[0][0] == ch && table[1][1] == ch && table[2][2] == ch) return true;
             if (table[0][2] == ch && table[1][1] == ch && table[2][0] == ch) return true;
 
-        }
+        
         return false;
     }
 
