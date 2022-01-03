@@ -15,15 +15,15 @@ public class HomeWorkSeven {
             new Cat("Teak", 5),
             new Cat("Caton", 18)
         };
-        Plate plate = new Plate(50, 30);
+        Plate plate = new Plate(40, 20);
 
         for (Cat cat: cats) {
             cat.eat(plate);
             System.out.println(cat);
         }
         System.out.println(plate);
-        plate.addFood(45);
-        System.out.println(plate);
+        plate.addFood(35);
+        
 
         for (Cat cat: cats) {
             cat.setHungry(false);
