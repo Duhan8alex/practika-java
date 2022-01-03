@@ -23,7 +23,7 @@ public class HomeWorkSeven {
         }
         System.out.println(plate);
         plate.addFood(35);
-        
+        System.out.println(plate);
 
         for (Cat cat: cats) {
             cat.setHungry(false);
