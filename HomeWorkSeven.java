@@ -15,20 +15,30 @@ public class HomeWorkSeven {
             new Cat("Teak", 5),
             new Cat("Caton", 18)
         };
-        Plate plate = new Plate(30);
+        Plate plate = new Plate(50, 30);
 
         for (Cat cat: cats) {
             cat.eat(plate);
-            cat.info();
+            System.out.println(cat);
         }
-        plate.addFood(50);
-        plate.info();
+        System.out.println(plate);
+        plate.addFood(45);
+        System.out.println(plate);
+
+        for (Cat cat: cats) {
+            cat.setHungry(false);
+            cat.eat(plate);
+            System.out.println(cat);
+        }
+        System.out.println(plate);
     }
 }
 
 class Plate {
+    private int volume;
     private int food;
-    Plate(int food) {
+    Plate(int volume, int food) {
+        this.volume = volume;
         this.food = food;
     }
     boolean decreaseFood(int n) {
@@ -40,10 +50,13 @@ class Plate {
         return true;
     }
     void addFood(int food) {
-        this.food += food;
+        if (this.food + food <= volume){
+            this.food += food;
+        }
     }
-    void info() {
-        System.out.println("plate: " + food);
+    @ Override
+    public String toString() {
+        return "plate: " + food;
     }
 }
 class Cat {
@@ -56,12 +69,13 @@ class Cat {
         this.appetite = appetite;
         this.hungry = true;
     }
-
-    void info() {
-        String isHungry = !hungry ? "сыт" : "голоден";
-        System.out.println(name + ": " + isHungry);
+    @ Override
+    public String toString() {
+        return "{name-" + name + ", hungry-" + hungry + "}";
     }
-
+    void setHungry(boolean status) {
+        hungry = status;
+    }
     void eat(Plate plate) {
         if (hungry && plate.decreaseFood(appetite))
             hungry = false;
